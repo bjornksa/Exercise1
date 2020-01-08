@@ -6,30 +6,33 @@ To complete this exercise you will have to use git. Create one or several commit
 When answering the questions, remember to use all the resources at your disposal. Asking the internet isn't a form of "cheating", it's a way of learning.
 
  ### What is concurrency? What is parallelism? What's the difference?
- > *Your answer here*
- 
+ > Concurrency means that several tasks are running in the same time period (not necessarily in the same instant), while parallellism means that the tasks are running at the exact same time.
+
  ### Why have machines become increasingly multicore in the past decade?
- > *Your answer here*
- 
+ > Technincal difficulties with increasing power of single core processors meant that using multithreading and other parallelisation techniques was a more viable option for increasing computational efficiency.
+
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
- > *Your answer here*
- 
+ > Concurrency can help with embedded systems that interact with several sensors and actuators simultanously, OSes that must handle several applications or computation programs that require high speed
+
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
  > *Your answer here*
- 
+
  ### What are the differences between processes, threads, green threads, and coroutines?
- > *Your answer here*
- 
+ > - Processes are instances of computer programs, the execution of the code. (from wikipedia)
+ > - The process consists of one or several threads, where all threads in one process share memory.
+ > - Green threads are created on the user lever instead of the OS level and don't have access to native OS abilities
+ > - Coroutines are similar to threads, but concurrent instead of parallell.
+
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > *Your answer here*
- 
+ > Threads
+
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > *Your answer here*
- 
+ > The GIL is a lock that makes sure only one thread can access a particular resource at a given time
+
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
- 
- ### What does `func GOMAXPROCS(n int) int` change? 
- > *Your answer here*
+ > Using the multiprocessing module and creating processes instead of threads, each with their own interpreter allowing concurrency on multicore processors
+
+ ### What does `func GOMAXPROCS(n int) int` change?
+ > The number of threads available to threads allocated to the program.
