@@ -1,2 +1,4 @@
 # Backup files for emacs
 **/*~
+*.o
+**/c/foo
