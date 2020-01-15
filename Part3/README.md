@@ -17,7 +17,7 @@ When answering the questions, remember to use all the resources at your disposal
 
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
- > *Your answer here*
+ > Concurrent programs gives the programmer a more flexible toolset, wich may help to solve some problems that are otherwise imposibble or very inefficient. It also seems to be able to cause a lot of headache and bugs.
 
  ### What are the differences between processes, threads, green threads, and coroutines?
  > - Processes are instances of computer programs, the execution of the code. (from wikipedia)
